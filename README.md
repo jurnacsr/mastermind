@@ -1,2 +1,2 @@
 # mastermind
-Stored My Mastermind Java GUI Application
+A simple Java mastermind game.  An attempt to create from scratch using best practice.
