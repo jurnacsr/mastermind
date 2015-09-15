@@ -5,11 +5,9 @@ import java.awt.event.MouseEvent;
 
 import com.srj.mastermind.game.entity.Entity;
 
-public class GameBoard extends Entity {
-	
-	private Solution sol;
+public class PiecePicker extends Entity{
 
-	public GameBoard(int x, int y, int width, int height) {
+	public PiecePicker(int x, int y, int width, int height) {
 		super(x, y, width, height);
 	}
 
@@ -18,12 +16,11 @@ public class GameBoard extends Entity {
 		
 	}
 
-	public void setSolution(Solution solution) {
-		this.sol = solution;
-	}
-
 	@Override
 	public void handleClick(MouseEvent e) {
-		
+		if (isClickWithin(e)) {
+			System.out.println("click in picker");
+		}
 	}
+
 }

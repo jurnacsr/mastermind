@@ -22,17 +22,25 @@ public class MastermindFrame extends JFrame {
 	public MastermindFrame() {
 		
 		instance = this;
-		
+
+		initGame();
 		initUI();
 		initMenu();
-		
-		panel = new MastermindPanel();
-		panel.setGame(game);
-		add(panel);
+		initPanel(game);
 		
 		setVisible(true);
 	}
 
+	private void initGame() {
+		game = new MastermindGame(C.ZERO, C.ZERO, C.ZERO, C.ZERO);
+	}
+
+	private void initPanel(MastermindGame g) {
+		panel = new MastermindPanel(g);
+		add(panel);
+		
+	}
+	
 	private void initMenu() {
 		
 		JMenuBar menuBar = new JMenuBar();
